@@ -1,6 +1,6 @@
 # AppiumTestTask
-##This task was made specially for Abrar
- #####Check that next tools were installed:**
+
+ #####Check that next tools were installed:
 1) XCode 8
 2) Appium 1.6.3
 3) JDK 1.8
