@@ -8,15 +8,15 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Created by aliaksandr on 26.02.17.
- */
+import java.util.concurrent.TimeUnit;
+
 public class Page {
 
     protected WebDriver driver;
 
     public Page(WebDriver driver) {
         this.driver = driver;
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         PageFactory.initElements(driver, this);
 
     }

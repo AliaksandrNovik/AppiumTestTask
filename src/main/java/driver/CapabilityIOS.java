@@ -2,18 +2,15 @@ package driver;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-/**
- * Created by aliaksandr on 27.02.17.
- */
 public class CapabilityIOS {
 
     public static DesiredCapabilities getCapabilities(){
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setCapability("platformVersion", "10.2");
-        caps.setCapability("browserName", "Safari");
-        caps.setCapability("platformName", "iOS");
-        caps.setCapability("automationName", "XCUITest");
-        caps.setCapability("deviceName", "iPhone Simulator");
+        caps.setCapability("app", "/Users/aliaksandr/IdeaProjects/bytestnovik/src/main/resources/cedeo.apk");
+        caps.setCapability("platformName", "Android");
+        caps.setCapability("platformVersion", "5.1");
+        caps.setCapability("udid", "71UBBLJ22KAQ");
+        caps.setCapability("deviceName", "Android");
         return caps;
     }
 

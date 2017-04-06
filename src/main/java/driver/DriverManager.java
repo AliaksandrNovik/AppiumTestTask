@@ -3,6 +3,8 @@ package driver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
 import java.net.URL;
 
 /**
@@ -10,12 +12,12 @@ import java.net.URL;
  */
 public class DriverManager {
 
-    private static IOSDriver driver;
+    private static RemoteWebDriver driver;
 
     private static DriverManager instance;
 
     private DriverManager(URL remoteAddress, DesiredCapabilities desiredCapabilities)  {
-        driver = new IOSDriver(remoteAddress,desiredCapabilities);
+        driver = new RemoteWebDriver(remoteAddress,desiredCapabilities);
     }
 
     public static DriverManager getInstance(URL remoteAddress, DesiredCapabilities desiredCapabilities) {
